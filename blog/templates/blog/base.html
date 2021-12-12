@@ -9,6 +9,9 @@
     </head>
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
             <h1><a href="">einshein django Blog</a></h1>
         </div>
         <div class="content container">
@@ -19,11 +22,6 @@
                 </div>
             </div>
         </div>
-        <!--<div>-->
-        <!--    <p>published: 14.06.2014, 12:14</p>-->
-        <!--    <h2><a href="">My second post</a></h2>-->
-        <!--    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>-->
-        <!--</div>-->
     </body>
 </html>
 
